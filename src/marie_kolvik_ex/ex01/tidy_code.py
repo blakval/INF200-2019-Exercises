@@ -1,48 +1,51 @@
 __author__ = 'Marie K. Valøy'
 __email__ = 'mvaloy@nmbu.no'
 
-from random import randint as a
+from random import randint
 
 
-def b():
+def ask_for_guess():
     """
-    Asks for a guess, tests if this is an integer of more than 1, if so,
+    Asks for a guess, tests if this is an positive integer, if so,
     it returns c, if not it ask once more.
     """
-    c = 0
-    while c < 1:
-        c = int(input('Your guess: '))
-    return c
+    guessed = 0
+    while guessed < 1:
+        guessed = int(input('Your guess: '))
+    return guessed
 
 
-def d():
+def sum_of_dices():
     """
     Simulating of throwing two dices and sum the numbers.
     Summing two random numbers between 1 and 6, including 1 and 6.
     """
-    return a(1, 6) + a(1, 6)
+    return randint(1, 6) + randint(1, 6)
 
 
-def e(f, g):
-    """ Checks if f is equal to g, if so it returns true, else it returns
+def is_equal(throw, guess):
+    """
+    Checks if f is equal to g, if so it returns true, else it returns
     false.
     """
-    return f == g
+    return throw == guess
 
 
 if __name__ == '__main__':
 
-    h = False
-    i = 3  # Number of guesses
-    j = d()  # The throw
-    while not h and i > 0:
-        k = b()  # Guessed number
-        h = e(j, k)  # Testing if your guess is correct
-        if not h:
-            print('Wrong, try again!')
-            i -= 1  # One guess used
+    Test = False
+    number_of_guesses = 3
+    Throw = sum_of_dices()
 
-    if i > 0:
-        print('You won {} points.'.format(i))
+    while not Test and number_of_guesses > 0:
+        Your_guess = ask_for_guess()
+        Test_if_guess_correct = is_equal(Throw, Your_guess)
+
+        if not Test_if_guess_correct:
+            print('Wrong, try again!')
+            number_of_guesses -= 1  # One guess used
+
+    if number_of_guesses > 0:
+        print('You won {} points.'.format(number_of_guesses))
     else:
-        print('You lost. Correct answer: {}.'.format(j))
+        print('You lost. Correct answer: {}.'.format(Throw))
