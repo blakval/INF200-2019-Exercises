@@ -11,7 +11,7 @@ def deck_loop():
 
 
 def deck_comp():
-    deck = [(suit, val) for val in VALUES for suit in SUITS]
+    deck = [(suit, val) for suit in SUITS for val in VALUES]
     return deck
 
 
