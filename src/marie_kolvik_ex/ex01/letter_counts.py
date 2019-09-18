@@ -1,5 +1,6 @@
 def letter_freq(txt):
-    txt.lower()
+    t = txt.lower()
+    txt = sorted(t)
 
     freq = {}
 
