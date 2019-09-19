@@ -17,7 +17,7 @@ def ask_for_guess():
 
 def sum_of_dices():
     """
-    Simulating of throwing two dices and sum the numbers.
+    Simulation of throwing two dices and sum the numbers.
     Summing two random numbers between 1 and 6, including 1 and 6.
     """
     return randint(1, 6) + randint(1, 6)
@@ -38,10 +38,10 @@ if __name__ == '__main__':
     Throw = sum_of_dices()
 
     while not Test and number_of_guesses > 0:
-        Your_guess = ask_for_guess()
-        Test_if_guess_correct = is_equal(Throw, Your_guess)
+        your_guess = ask_for_guess()
+        Test = is_equal(Throw, your_guess)
 
-        if not Test_if_guess_correct:
+        if not Test:
             print('Wrong, try again!')
             number_of_guesses -= 1  # One guess used
 
