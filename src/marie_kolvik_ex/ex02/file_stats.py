@@ -1,3 +1,6 @@
+from src.marie_kolvik_ex.ex01.letter_counts import letter_freq
+
+
 def char_counts(textfilename):
     """
     Opens the file using encoding utf-8 and reads the entire file
@@ -9,7 +12,7 @@ def char_counts(textfilename):
     string = file.read()
     file.close()
 
-    counts = letter_counts(string)
+    counts = letter_freq(string)
 
     return counts
 
@@ -29,4 +32,3 @@ if __name__ == '__main__':
                     code, character, frequencies[code]
                 )
             )
-
