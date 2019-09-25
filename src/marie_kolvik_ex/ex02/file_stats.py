@@ -1,5 +1,18 @@
 def char_counts(textfilename):
-    pass
+    """
+    Opens the file using encoding utf-8 and reads the entire file
+    content into a single string. Then counts how often each character code
+    (0 - 255) occurs in the string and return the result as a list or tuple
+    where result[i] gives the number of occurances of character code i.
+    """
+    file = open(textfilename)
+    string = file.read()
+    file.close()
+
+    counts = letter_counts(string)
+
+    return counts
+
 
 if __name__ == '__main__':
 
@@ -16,3 +29,4 @@ if __name__ == '__main__':
                     code, character, frequencies[code]
                 )
             )
+
