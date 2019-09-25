@@ -14,7 +14,11 @@ def char_counts(textfilename):
 
     counts = letter_freq(string)
 
-    return counts
+    codedstring = []
+    for letter in counts:
+        codedstring.append(ord(letter))
+
+    return codedstring
 
 
 if __name__ == '__main__':
