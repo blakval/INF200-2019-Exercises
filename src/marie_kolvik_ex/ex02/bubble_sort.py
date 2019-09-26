@@ -27,6 +27,7 @@ def bubble_sort(data):
 
 if __name__ == "__main__":
 
+    # I rewrite the variable name of data so as to not violate pep-8.
     for info in ((),
                  (1,),
                  (1, 3, 8, 12),
