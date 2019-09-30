@@ -26,7 +26,7 @@ def entropy(message):
     counts = letter_freq(message)
     for letter, count in counts.items():
         p_i = count / tot_letters
-        h.append(- p_i * log2(p_i))
+        h.append(-p_i * log2(p_i))
 
     entropy_sum = sum(h)
 
@@ -34,5 +34,5 @@ def entropy(message):
 
 
 if __name__ == "__main__":
-    for msg in '', 'aaaa', 'aaba', 'abcd', 'This is a short text.':
-        print('{:25}: {:8.3f} bits'.format(msg, entropy(msg)))
+    for msg in "", "aaaa", "aaba", "abcd", "This is a short text.":
+        print("{:25}: {:8.3f} bits".format(msg, entropy(msg)))

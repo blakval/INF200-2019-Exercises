@@ -28,9 +28,5 @@ def bubble_sort(data):
 if __name__ == "__main__":
 
     # I rewrite the variable name of data so as to not violate pep-8.
-    for info in ((),
-                 (1,),
-                 (1, 3, 8, 12),
-                 (12, 8, 3, 1),
-                 (8, 3, 12, 1)):
-        print('{!s:>15} --> {!s:>15}'.format(info, bubble_sort(info)))
+    for info in ((), (1,), (1, 3, 8, 12), (12, 8, 3, 1), (8, 3, 12, 1)):
+        print("{!s:>15} --> {!s:>15}".format(info, bubble_sort(info)))

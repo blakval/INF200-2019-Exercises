@@ -1,5 +1,5 @@
-__author__ = 'Marie K. Valøy'
-__email__ = 'mvaloy@nmbu.no'
+__author__ = "Marie K. Valøy"
+__email__ = "mvaloy@nmbu.no"
 
 from random import randint
 
@@ -11,7 +11,7 @@ def ask_for_guess():
     """
     guessed = 0
     while guessed < 1:
-        guessed = int(input('Your guess: '))
+        guessed = int(input("Your guess: "))
     return guessed
 
 
@@ -31,7 +31,7 @@ def is_equal(throw, guess):
     return throw == guess
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     Test = False
     number_of_guesses = 3
@@ -42,10 +42,10 @@ if __name__ == '__main__':
         Test = is_equal(Throw, your_guess)
 
         if not Test:
-            print('Wrong, try again!')
+            print("Wrong, try again!")
             number_of_guesses -= 1  # One guess used
 
     if number_of_guesses > 0:
-        print('You won {} points.'.format(number_of_guesses))
+        print("You won {} points.".format(number_of_guesses))
     else:
-        print('You lost. Correct answer: {}.'.format(Throw))
+        print("You lost. Correct answer: {}.".format(Throw))
