@@ -31,7 +31,7 @@ def test_median_odd():
 
 
 def test_median_even():
-    """Tests that the median works for lists with even numbers of elements"""
+    """Tests that median works for lists with even numbers of elements"""
     assert median([4, 6, 7, 1000]) == 6.5, 'Function failed test_median_even.'
 
 
