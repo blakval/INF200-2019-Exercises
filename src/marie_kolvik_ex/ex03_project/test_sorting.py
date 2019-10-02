@@ -1,3 +1,6 @@
+__author__ = 'Marie Kolvik Valøy'
+__email__ = 'mvaloy@nmbu.no'
+
 def bubble_sort(data):
     """
     This function takes a list of numbers and return a list sorted in
