@@ -38,3 +38,13 @@ def test_median_even():
 def test_median_sorted():
     """Tests if the median works for lists with ordered elements"""
     assert median([1, 2, 3, 4, 5]) == 3, 'Function failed thest_media_sorted.'
+
+
+def test_median_reverse():
+    """Tests if the median works for lists with reverse-ordered elements"""
+    assert median([5, 4, 3, 2, 1]) == 3, 'Function failed test_median_reverse.'
+
+
+def test_median_unordered():
+    """Tests if the median works for unordered lists"""
+    assert median([9, 1, 16, 0.3]) == 5, 'Failed test_median_unordered.'
