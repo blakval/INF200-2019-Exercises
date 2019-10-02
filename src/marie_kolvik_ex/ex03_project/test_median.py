@@ -41,7 +41,7 @@ def test_median_sorted():
 
 
 def test_median_reverse():
-    """Tests if the median works for lists with reverse-ordered elements"""
+    """Tests if median works for lists with reverse-ordered elements"""
     assert median([5, 4, 3, 2, 1]) == 3, 'Function failed test_median_reverse.'
 
 
