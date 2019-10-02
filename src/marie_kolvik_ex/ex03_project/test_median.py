@@ -1,3 +1,6 @@
+__author__ = 'Marie Kolvik Valøy'
+__email__ = 'mvaloy@nmbu.no'
+
 def median(data):
     """
     Returns median of data.
@@ -14,6 +17,5 @@ def median(data):
     n = len(sdata)
     return (sdata[n//2] if n % 2 == 1
         else 0.5 * (sdata[n//2 - 1] + sdata[n//2]))
-
 
 
