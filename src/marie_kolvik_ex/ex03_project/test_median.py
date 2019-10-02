@@ -21,7 +21,7 @@ def median(data):
 
 
 def test_median_single():
-    """Tests that the median returns correct value for an one-element list."""
+    """Tests that median returns correct value for an one-element list."""
     assert median([5]) == 5, 'Function failed test_median_single.'
 
 
