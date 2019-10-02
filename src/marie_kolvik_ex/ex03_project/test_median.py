@@ -46,5 +46,5 @@ def test_median_reverse():
 
 
 def test_median_unordered():
-    """Tests if the median works for unordered lists"""
+    """Tests if median works for unordered lists"""
     assert median([9, 1, 16, 0.3]) == 5, 'Failed test_median_unordered.'
