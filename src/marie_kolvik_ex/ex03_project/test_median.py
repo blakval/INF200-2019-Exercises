@@ -48,3 +48,8 @@ def test_median_reverse():
 def test_median_unordered():
     """Tests if median works for unordered lists"""
     assert median([9, 1, 16, 0.3]) == 5, 'Failed test_median_unordered.'
+
+
+def test_median_empty_raises_ValueError():
+    """Tests if the median raises a ValueError if given an empty list."""
+    assert median([]) == ValueError, 'Failed to raise ValueError.'
