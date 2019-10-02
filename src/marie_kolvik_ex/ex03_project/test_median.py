@@ -26,7 +26,7 @@ def test_median_single():
 
 
 def test_median_odd():
-    """Tests that the median works for lists with odd numbers of elements"""
+    """Tests that median works for lists with odd numbers of elements"""
     assert median([4, 6, 7]) == 6, 'Function failed test_median_odd.'
 
 
