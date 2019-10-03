@@ -87,3 +87,8 @@ def test_median_negative():
 def test_median_digits():
     """Tests that median could take lists with floats."""
     assert median([9, 1, 16, 0.3]) == 5, 'Failed to take a float.'
+
+
+def test_median_equal():
+    """Tests that median could take lists with equal numbers."""
+    assert median([9, 1, 6, 6]) == 6, 'Cant take a list with equal numbers.'
