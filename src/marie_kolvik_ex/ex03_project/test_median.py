@@ -82,3 +82,8 @@ def test_median_tuples_and_list():
 def test_median_negative():
     """Tests that median works with negative numbers."""
     assert median([4, -5, 7, 18, 9]) == 7, 'Failed to take a negative number.'
+
+
+def test_median_digits():
+    """Tests that median could take lists with floats."""
+    assert median([9, 1, 16, 0.3]) == 5, 'Failed to take a float.'
