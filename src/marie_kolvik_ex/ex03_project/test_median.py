@@ -1,6 +1,8 @@
 __author__ = 'Marie Kolvik Valøy'
 __email__ = 'mvaloy@nmbu.no'
 
+import pytest
+
 
 def median(data):
     """
@@ -58,4 +60,6 @@ def test_median_unordered():
 
 def test_median_empty_raises_valueerror():
     """Tests if the median raises a ValueError if given an empty list."""
-    assert median([]) == ValueError, 'Failed to raise ValueError.'
+    with pytest.raises(ValueError):
+        median([])
+
