@@ -77,3 +77,8 @@ def test_median_unchanged():
 def test_median_tuples_and_list():
     """Tests that median works for tuples as well as lists."""
     assert median((5, 9, 2, 92, 7)) == 7, 'Failed the median_tuples_and_list.'
+
+
+def test_median_negative():
+    """Tests that median works with negative numbers."""
+    assert median([4, -5, 7, 18, 9]) == 7, 'Failed to take a negative number.'
