@@ -12,12 +12,18 @@ def median(data):
     Source:
     https://github.com/yngvem/INF200-2019-Exercises/blob/master/
     exersices/ex03.rst
+
+    With some modifying by me.
     """
 
-    sdata = sorted(data)
-    n = len(sdata)
-    return (sdata[n//2] if n % 2 == 1
-        else 0.5 * (sdata[n//2 - 1] + sdata[n//2]))
+    sorted_data = sorted(data)
+    num_elements = len(sorted_data)
+
+    if num_elements % 2 == 1:
+        return sorted_data[num_elements//2]
+    else:
+        return 0.5 * (sorted_data[num_elements//2 - 1] +
+                      sorted_data[num_elements//2])
 
 
 def test_median_single():
@@ -50,6 +56,6 @@ def test_median_unordered():
     assert median([9, 1, 16, 0.3]) == 5, 'Failed test_median_unordered.'
 
 
-def test_median_empty_raises_ValueError():
+def test_median_empty_raises_valueerror():
     """Tests if the median raises a ValueError if given an empty list."""
     assert median([]) == ValueError, 'Failed to raise ValueError.'
