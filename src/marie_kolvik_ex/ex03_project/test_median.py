@@ -21,11 +21,14 @@ def median(data):
     sorted_data = sorted(data)
     num_elements = len(sorted_data)
 
-    if num_elements % 2 == 1:
-        return sorted_data[num_elements//2]
+    if num_elements == 0:
+        raise ValueError
     else:
-        return 0.5 * (sorted_data[num_elements//2 - 1] +
-                      sorted_data[num_elements//2])
+        if num_elements % 2 == 1:
+            return sorted_data[num_elements//2]
+        else:
+            return 0.5 * (sorted_data[num_elements//2 - 1] +
+                          sorted_data[num_elements//2])
 
 
 def test_median_single():
@@ -58,8 +61,7 @@ def test_median_unordered():
     assert median([9, 1, 16, 0.3]) == 5, 'Failed test_median_unordered.'
 
 
-def test_median_empty_raises_valueerror():
+def test_median_empty_raises_value_error():
     """Tests if the median raises a ValueError if given an empty list."""
     with pytest.raises(ValueError):
         median([])
-
