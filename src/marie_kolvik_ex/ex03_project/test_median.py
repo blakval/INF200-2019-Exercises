@@ -65,3 +65,9 @@ def test_median_empty_raises_value_error():
     """Tests if the median raises a ValueError if given an empty list."""
     with pytest.raises(ValueError):
         median([])
+
+def test_median_unchanged():
+    """Tests if median leaves the original data unchanged."""
+    data = [4, 9, 13, 5]
+    median(data)
+    assert data == data, 'failed test_median_unchanged.'
