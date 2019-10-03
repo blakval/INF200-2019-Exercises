@@ -66,8 +66,14 @@ def test_median_empty_raises_value_error():
     with pytest.raises(ValueError):
         median([])
 
+
 def test_median_unchanged():
     """Tests if median leaves the original data unchanged."""
     data = [4, 9, 13, 5]
     median(data)
     assert data == data, 'failed test_median_unchanged.'
+
+
+def test_median_tuples_and_list():
+    """Tests that median works for tuples as well as lists."""
+    assert median((5, 9, 2, 92, 7)) == 7, 'Failed the median_tuples_and_list.'
