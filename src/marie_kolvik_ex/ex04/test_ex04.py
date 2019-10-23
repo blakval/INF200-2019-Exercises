@@ -10,9 +10,9 @@ Your code should pass these tests before submission.
 
 import pytest
 
-from myrand import LCGRand, ListRand
+from src.marie_kolvik_ex.ex04.myrand import LCGRand, ListRand
 
-from walker import Walker
+from src.marie_kolvik_ex.ex04.walker import Walker
 
 __author__ = 'Hans Ekkehard Plesser'
 
