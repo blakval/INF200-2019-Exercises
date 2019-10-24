@@ -29,7 +29,7 @@ class Walker:
             return'The student is not at home'
 
     def get_position(self):
-        pass
+        return self.position
 
     def get_steps(self):
-        pass
+        return self.number_of_steps
