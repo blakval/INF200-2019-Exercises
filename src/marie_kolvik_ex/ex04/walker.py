@@ -47,6 +47,6 @@ if __name__ == '__main__':
     for i in homes:
         lengths = []
         for j in range(number_of_times):
-            lengths.append(wandering(start_position, homes[i]))
+            lengths.append(wandering(start_position, i))
 
-        print(f'Distance: {homes[i]} -> Path lengths:{lengths}')
+        print(f'Distance: {i} -> Path lengths:{lengths}')
