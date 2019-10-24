@@ -5,4 +5,18 @@ __email__ = 'mvaloy@nmbu.no'
 
 
 class Walker:
-    pass
+    def __init__(self, start, home):
+        self.start = start
+        self.home = home
+
+    def one_step(self):
+        pass
+
+    def is_at_home(self):
+        pass
+
+    def get_position(self):
+        pass
+
+    def get_steps(self):
+        pass
