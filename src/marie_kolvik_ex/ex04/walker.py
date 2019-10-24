@@ -23,7 +23,10 @@ class Walker:
             self.position += step
 
     def is_at_home(self):
-        pass
+        if self.position == self.home:
+            return'The student is at home'
+        else:
+            return'The student is not at home'
 
     def get_position(self):
         pass
