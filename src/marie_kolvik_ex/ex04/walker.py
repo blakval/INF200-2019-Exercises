@@ -12,7 +12,7 @@ class Walker:
         self.home = home
         self.number_of_steps = 0
 
-    def one_step(self):
+    def move(self):
         step = randint(0, 1)
         self.number_of_steps += 1
         if step == 0:
