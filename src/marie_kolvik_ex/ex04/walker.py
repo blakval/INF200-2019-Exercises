@@ -16,11 +16,9 @@ class Walker:
         step = randint(0, 1)
         self.number_of_steps += 1
         if step == 0:
-            step = -1
-        if self.position == self.home:
-            return'The student is at home'
+            self.position -= 1
         else:
-            self.position += step
+            self.position += 1
 
     def is_at_home(self):
         if self.position == self.home:
