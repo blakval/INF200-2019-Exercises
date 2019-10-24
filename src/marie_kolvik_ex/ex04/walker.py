@@ -33,3 +33,22 @@ class Walker:
 
     def get_steps(self):
         return self.number_of_steps
+
+
+if __name__ == '__main__':
+    start_position = 0
+    homes = [1, 2, 5, 10, 20, 50, 100]
+    number_of_times = 5
+
+    def wandering(starr, homm):
+        walker = Walker(starr, homm)
+        while walker.get_position() != homm:
+            walker.move()
+        return walker.get_steps()
+
+    for i in homes:
+        lengths = []
+        for j in range(number_of_times):
+            lengths.append(wandering(start_position, homes[i]))
+
+        print(f'Distance: {homes[i]} -> Path lengths:{lengths}')
