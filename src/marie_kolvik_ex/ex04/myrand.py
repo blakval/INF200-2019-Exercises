@@ -6,13 +6,13 @@ __email__ = 'mvaloy@nmbu.no'
 
 class LCGRand:
     def __init__(self, seed):
-        self.r = seed
+        self.seed = seed
 
     def rand(self):
         a = 7 ** 5
         m = 2 ** 31 - 1
-        self.r = (a * self.r % m)
-        return self.r
+        self.seed = (a * self.seed % m)
+        return self.seed
 
 
 class ListRand:
