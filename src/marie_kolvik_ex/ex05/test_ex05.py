@@ -5,7 +5,7 @@ Acceptance test suite for EX05.
 Your code should pass these tests before submission.
 """
 
-from walker_sim import Walker, Simulation
+from src.marie_kolvik_ex.ex05.walker_sim import Walker, Simulation
 from bounded_sim import BoundedWalker, BoundedSimulation
 from myrand import LCGRand
 
