@@ -64,6 +64,24 @@ class Simulation:
             walker.move()
         return walker.get_steps()
 
+    def run_simulation(self, num_walks):
+        """
+        Run a set of walks, returns list of number of steps taken.
+        Arguments
+        ---------
+        num_walks : int
+            The number of walks to simulate
+
+        Returns
+        -------
+        list[int]
+            List with the number of steps per walk
+        """
+        num_walks_list = []
+        for run in range(num_walks):
+            num_walks_list.append(self.single_walk())
+        return num_walks_list
+
 
 if __name__ == '__main__':
     start_position = 0
