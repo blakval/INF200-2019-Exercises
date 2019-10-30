@@ -30,6 +30,27 @@ class Walker:
         return self.number_of_steps
 
 
+class Simulation:
+
+    def __init__(self, start, home, seed):
+        """
+       Initialise the simulation
+
+       Arguments
+       ---------
+       start : int
+           The walker's initial position
+       home : int
+           The walk ends when the walker reaches home
+       seed : int
+           Random generator seed
+       """
+
+        self.start = start
+        self.home = home
+        self.seed = seed
+
+
 if __name__ == '__main__':
     start_position = 0
     homes = [1, 2, 5, 10, 20, 50, 100]
