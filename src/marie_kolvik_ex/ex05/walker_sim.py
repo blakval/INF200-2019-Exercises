@@ -50,6 +50,20 @@ class Simulation:
         self.home = home
         self.seed = seed
 
+    def single_walk(self):
+        """
+        Simulate single walk from start to home, returning number of steps.
+
+        Returns
+        -------
+        int
+            The number of steps taken
+        """
+        walker = Walker(self.start, self.home)
+        while walker.get_position() != self.home:
+            walker.move()
+        return walker.get_steps()
+
 
 if __name__ == '__main__':
     start_position = 0
