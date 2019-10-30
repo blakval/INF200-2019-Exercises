@@ -84,19 +84,24 @@ class Simulation:
 
 
 if __name__ == '__main__':
-    start_position = 0
-    homes = [1, 2, 5, 10, 20, 50, 100]
-    number_of_times = 5
+    start1 = 0
+    start2 = 10
+    home1 = 10
+    home2 = 0
+    number_of_walks = 20
+    number_of_times = 2
+    seed1 = 12345
+    seed2 = 54321
 
-    def wandering(starr, homm):
-        walker = Walker(starr, homm)
-        while walker.get_position() != homm:
-            walker.move()
-        return walker.get_steps()
+    for t in range(number_of_times):
+        walker11 = Simulation(start1, home1, seed1)
+        walker21 = Simulation(start2, home2, seed1)
 
-    for i in homes:
-        lengths = []
-        for j in range(number_of_times):
-            lengths.append(wandering(start_position, i))
+        print(walker11.run_simulation(number_of_walks))
+        print(walker21.run_simulation(number_of_walks))
 
-        print(f'Distance: {i} -> Path lengths:{lengths}')
+    walker12 = Simulation(start1, home1, seed2)
+    walker22 = Simulation(start2, home2, seed2)
+
+    print(walker12.run_simulation(number_of_walks))
+    print(walker22.run_simulation(number_of_walks))
