@@ -3,7 +3,7 @@
 __author__ = 'Marie Kolvik Valøy'
 __email__ = 'mvaloy@nmbu.no'
 
-from random import randint
+import random
 
 
 class Walker:
@@ -13,7 +13,7 @@ class Walker:
         self.number_of_steps = 0
 
     def move(self):
-        step = randint(0, 1)
+        step = random.randint(0, 1)
         self.number_of_steps += 1
         if step == 0:
             self.position -= 1
@@ -48,7 +48,7 @@ class Simulation:
 
         self.start = start
         self.home = home
-        self.seed = seed
+        random.seed(seed)
 
     def single_walk(self):
         """
