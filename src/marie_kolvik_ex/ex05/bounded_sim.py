@@ -3,8 +3,10 @@
 __author__ = 'Marie Kolvik Valøy'
 __email__ = 'mvaloy@nmbu.no'
 
+from src.marie_kolvik_ex.ex05.walker_sim import Walker, Simulation
 
-class BoundedWalker:
+
+class BoundedWalker(Walker):
     def __init__(self, start, home, left_limit, right_limit):
         """
         Initialise the walker
@@ -22,6 +24,12 @@ class BoundedWalker:
         self.left_limit, self.right_limit = left_limit, right_limit
         super().__init__(start, home)
 
+    def move(self):
+        """Change position by +1 or -1 with equal probability."""
+        position = self.position
+        if position != self.left_limit and position != self.right_limit:
+            super().move()
 
-class BoundedSimulation:
+
+class BoundedSimulation(Simulation):
     pass
