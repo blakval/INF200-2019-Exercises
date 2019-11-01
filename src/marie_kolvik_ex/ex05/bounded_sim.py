@@ -64,5 +64,6 @@ class BoundedSimulation(Simulation):
         """
         walker = Walker(self.start, self.home)
         position = walker.get_position()
-        if position != self.left_limit and position != self.right_limit:
+        while position != self.left_limit and position != self.right_limit:
             super().single_walk()
+        return walker.get_steps()
