@@ -79,5 +79,5 @@ if __name__ == '__main__':
     for left_end in left_boundaries:
         turn = BoundedSimulation(start_test, home_test, seed_test, left_end,
                                  right_boundary_test)
-        durations = turn.single_walk()
+        durations = turn.run_simulation(num_walks)
         print(f'Left boundary = {left_end} gives: {durations}')
