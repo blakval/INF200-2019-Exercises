@@ -66,3 +66,18 @@ class BoundedSimulation(Simulation):
         position = walker.get_position()
         while position != self.left_limit and position != self.right_limit:
             return super().single_walk()
+
+
+if __name__ == '__main__':
+    num_walks = 20
+    start_test = 0
+    home_test = 20
+    right_boundary_test = 20
+    left_boundaries = [0, -10, -100, -1000, -10000]
+    seed_test = 12345
+
+    for left_end in left_boundaries:
+        turn = BoundedSimulation(start_test, home_test, seed_test, left_end,
+                                 right_boundary_test)
+        durations = turn.single_walk()
+        print(f'Left boundary = {left_end} gives: {durations}')
