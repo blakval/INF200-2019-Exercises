@@ -64,15 +64,15 @@ class RandIter:
         RuntimeError
             If iter is called twice on the same RandIter object.
         """
-        random_numbers = []
-        used_seed = 12
-        while self.length != self.num_generated_numbers:
-            self.num_generated_numbers += 1
-            random_numbers.append(LCGRand(used_seed))
-
         if self. num_generated_numbers is not None:
             raise RuntimeError('You called __iter__ twice')
         else:
+            random_numbers = []
+            used_seed = 12
+            while self.length != self.num_generated_numbers:
+                self.num_generated_numbers += 1
+                random_numbers.append(LCGRand(used_seed))
+
             return random_numbers
 
     def __next__(self):
