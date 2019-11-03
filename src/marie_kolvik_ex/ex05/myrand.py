@@ -93,3 +93,14 @@ class RandIter:
             raise RuntimeError('You must call __iter__ before __next__')
         else:
             return LCGRand(hiden_seed)
+
+    def infinite_random_sequence(self):
+        """
+        Generate an infinite sequence of random numbers.
+
+        Yields
+        ------
+        int
+            A random number.
+        """
+        pass
