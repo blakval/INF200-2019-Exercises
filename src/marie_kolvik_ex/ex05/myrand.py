@@ -108,3 +108,18 @@ class RandIter:
         for it in range(length):
             self.length += 1
             return LCGRand(hidden_seed)
+
+
+if __name__ == '__main__':
+    ran_number_generator = LCGRand(1)
+    num = 0
+    for rand in ran_number_generator.random_sequence(10):
+        print(rand)
+        num += 1
+        if num > 100:
+            break
+
+    for i, rand in RandIter.infinite_random_sequence():
+        print(f'The {i}-th random number is {rand}')
+        if i > 100:
+            break
