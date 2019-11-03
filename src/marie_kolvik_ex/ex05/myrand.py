@@ -86,10 +86,10 @@ class RandIter:
         StopIteration
             If ``self.length`` random numbers are generated.
         """
+        hiden_seed = 12
         if self.num_generated_numbers == self.length:
             raise StopIteration
         elif self.num_generated_numbers is None:
             raise RuntimeError('You must call __iter__ before __next__')
         else:
-            used_seed = 12
-            return LCGRand(used_seed)
+            return LCGRand(hiden_seed)
