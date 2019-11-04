@@ -103,9 +103,8 @@ class RandIter:
         int
             A random number.
         """
-        length = self.length
         hidden_seed = 3
-        for it in range(length):
+        for it in range(self.length):
             self.length += 1
             return LCGRand(hidden_seed)
 
