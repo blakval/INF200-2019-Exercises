@@ -35,6 +35,23 @@ class LCGRand:
     def random_sequence(self, length):
         return RandIter(self, length)
 
+    def infinite_random_sequence(self):
+        """
+        Generate an infinite sequence of random numbers.
+
+        Yields
+        ------
+        int
+            A random number.
+        """
+        length = 1
+        for it in range(length):
+            length += 1
+            rad = RandIter(self, 1)
+            rad.__iter__()
+            number = rad.__next__()
+            return number
+
 
 class RandIter:
     def __init__(self, random_number_generator, length):
@@ -92,33 +109,16 @@ class RandIter:
         elif self.num_generated_numbers is None:
             raise RuntimeError('You must call __iter__ before __next__')
         else:
+            self.num_generated_numbers += 1
             return LCGRand(hiden_seed)
-
-    def infinite_random_sequence(self):
-        """
-        Generate an infinite sequence of random numbers.
-
-        Yields
-        ------
-        int
-            A random number.
-        """
-        hidden_seed = 3
-        for it in range(self.length):
-            self.length += 1
-            return LCGRand(hidden_seed)
 
 
 if __name__ == '__main__':
     ran_number_generator = LCGRand(1)
-    num = 0
     for rand in ran_number_generator.random_sequence(10):
         print(rand)
-        num += 1
-        if num > 100:
-            break
 
-    for i, rand in RandIter.infinite_random_sequence():
+    for i, rand in enumerate(ran_number_generator.infinite_random_sequence()):
         print(f'The {i}-th random number is {rand}')
         if i > 100:
             break
