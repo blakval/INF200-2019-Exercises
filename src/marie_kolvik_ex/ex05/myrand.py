@@ -44,9 +44,10 @@ class LCGRand:
         int
             A random number.
         """
-        length = 1
-        if length > 0:
-            return RandIter(self, 1)
+        length = 2
+        while length > 0:
+            length += 1
+            return RandIter(self, length)
 
 
 class RandIter:
@@ -99,14 +100,13 @@ class RandIter:
         StopIteration
             If ``self.length`` random numbers are generated.
         """
-        hiden_seed = 12
         if self.num_generated_numbers == self.length:
             raise StopIteration
         elif self.num_generated_numbers is None:
             raise RuntimeError('You must call __iter__ before __next__')
         else:
             self.num_generated_numbers += 1
-            return LCGRand(hiden_seed)
+            return self.generator.rand()
 
 
 if __name__ == '__main__':
