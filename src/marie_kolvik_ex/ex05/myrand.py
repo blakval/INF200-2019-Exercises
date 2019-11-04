@@ -44,10 +44,9 @@ class LCGRand:
         int
             A random number.
         """
-        length = 2
-        while length > 0:
-            length += 1
-            return RandIter(self, length)
+
+        while True:
+            yield self.rand()
 
 
 class RandIter:
