@@ -45,12 +45,8 @@ class LCGRand:
             A random number.
         """
         length = 1
-        for it in range(length):
-            length += 1
-            rad = RandIter(self, 1)
-            rad.__iter__()
-            number = rad.__next__()
-            return number
+        if length > 0:
+            return RandIter(self, 1)
 
 
 class RandIter:
